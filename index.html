@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İhtiyaç Kredisi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo">
+                <img src="logo-garantibbva-2x.png" alt="Garanti BBVA Logo">
+            </div>
+            <div class="top-bar-right">
+                <span>USD 34,0150 %0,02</span>
+                <span class="user-info">
+                    <img src="profilephotosmall.jpeg" alt="User Image">
+                    ABDULLAH GÖÇER
+                </span>
+                <div class="user-actions">
+                    <a href="#"><i class="bell-icon"></i></a>
+                    <a href="#"><i class="gift-icon"></i></a>
+                    <a href="#">Çıkış</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <nav class="navbar">
+                <a href="#"><i class="home-icon"></i>Özet</a>
+                <a href="#">Hesap ve Ürün</a>
+                <a href="#">Kart</a>
+                <a href="#">Para Transferi</a>
+                <a href="#">Ödeme</a>
+                <a href="#">Yatırım</a>
+                <a href="#">Başvuru</a>
+                <a href="#"><i class="search-icon"></i></a>
+            </nav>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        Başvuru > Kredi > İhtiyaç Kredisi
+    </div>
+    <div class="main-content">
+        <div class="form-container">
+            <h2>İhtiyaç Kredisi</h2>
+            <div class="tabs">
+                <button class="tablinks active" onclick="openTab(event, 'KrediTutar')">Kredi Tutarı ile Hesapla</button>
+                <button class="tablinks" onclick="openTab(event, 'TaksitTutar')">Taksit Tutarı ile Hesapla</button>
+            </div>
+            <div id="KrediTutar" class="tabcontent" style="display: block;">
+                <p>Lütfen aşağıdaki bilgileri girin.</p>
+                <div class="input-group">
+                    <input type="text" id="kredi-tutari" class="input-field" placeholder="Kredi Tutarı">
+                </div>
+                <div class="input-group">
+                    <label for="vade">Vade (Ay)</label>
+                    <div class="radio-container">
+                        <input type="radio" name="vade" value="24" id="vade24">
+                        <label for="vade24">24</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="vade" value="36" id="vade36">
+                        <label for="vade36">36</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="vade" value="diger" id="vadeDiger">
+                        <label for="vadeDiger">Diğer</label>
+                    </div>
+                </div>
+                <div class="input-group" style="margin-top: 20px;">
+                    <select id="kredi-turu" class="input-field">
+                        <option  value=""  selected>Sigortasız Kredi </option>
+                        <option  value=""  selected>Yaza Merhaba Kredisi</option>
+                        <option  value=""  selected>Kredi Türü Seç</option>
+
+                    </select>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="promosyon-kodu">
+                    <label for="promosyon-kodu">Promosyon kodu kullanmak istiyorum.</label>
+                </div>
+                <p class="info-text">İlgili yasal düzenleme kapsamında 16 Eylül 2021 sonrasında açılan tüm ihtiyaç kredilerinizin maksimum vade limiti, kalan anapara bakiye toplamı 50.000 TL ve altında ise 36 ay, 50.000 TL ve 100.000 TL arasında ise 24 ay, 100.000 TL üzerinde ise 12 aydır.</p>
+                <p class="info-text">Garanti BBVA İnternet Bankacılığında yapılan başvurularda müşterilerimiz onaylanan tutar kadar kredi kullanabilirler. Maaş ödemesini bankamızdan almayan müşterilerimiz için buradan kullanabilecek üst limit 25.000 TL’dir. KOBİ müşterilerimiz için ise Garanti BBVA İnternet Bankacılığından kullanabilecek üst limit 50.000 TL’dir. Başvurunuzu şubelerimizden yaptıysanız kullanım için herhangi bir üst limit bulunmamaktadır.</p>
+                <div class="button-container">
+                    <button type="submit" class="calculate-button">Hesapla</button>
+                </div>
+            </div>
+            <div id="TaksitTutar" class="tabcontent">
+                <p>Lütfen aşağıdaki bilgileri girin.</p>
+                <div class="input-group">
+                    <input type="text" id="taksit-tutari" class="input-field" placeholder="Taksit Tutarı">
+                </div>
+                <div class="input-group">
+                    <label for="vade-taksit">Vade (Ay)</label>
+                    <div class="radio-container">
+                        <input type="radio" name="vade-taksit" value="24" id="vade-taksit24">
+                        <label for="vade-taksit24">24</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="vade-taksit" value="36" id="vade-taksit36">
+                        <label for="vade-taksit36">36</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="vade-taksit" value="diger" id="vade-taksitDiger">
+                        <label for="vade-taksitDiger">Diğer</label>
+                    </div>
+                </div>
+                <div class="input-group" style="margin-top: 20px;">
+                    <select id="kredi-turu" class="input-field">
+                        <option  value=""  selected>Sigortasız Kredi </option>
+                        <option  value=""  selected>Yaza Merhaba Kredisi</option>
+                        <option  value=""  selected>Kredi Türü Seç</option>
+
+                    </select>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="promosyon-kodu-taksit">
+                    <label for="promosyon-kodu-taksit">Promosyon kodu kullanmak istiyorum.</label>
+                </div>
+                <p class="info-text">İlgili yasal düzenleme kapsamında 16 Eylül 2021 sonrasında açılan tüm ihtiyaç kredilerinizin maksimum vade limiti, kalan anapara bakiye toplamı 50.000 TL ve altında ise 36 ay, 50.000 TL ve 100.000 TL arasında ise 24 ay, 100.000 TL üzerinde ise 12 aydır.</p>
+                <p class="info-text">Garanti BBVA İnternet Bankacılığında yapılan başvurularda müşterilerimiz onaylanan tutar kadar kredi kullanabilirler. Maaş ödemesini bankamızdan almayan müşterilerimiz için buradan kullanabilecek üst limit 25.000 TL’dir. KOBİ müşterilerimiz için ise Garanti BBVA İnternet Bankacılığından kullanabilecek üst limit 50.000 TL’dir. Başvurunuzu şubelerimizden yaptıysanız kullanım için herhangi bir üst limit bulunmamaktadır.</p>
+                <div class="button-container">
+                    <button type="submit" class="calculate-button">Hesapla</button>
+                </div>
+            </div>
+        </div>
+        <aside class="sidebar">
+            <div class="help-container">
+                <h3>Yardım ve Öneriler</h3>
+                <p>En fazla ne kadarlık kredi başvurusu ve kullanımı yapabilirim?</p>
+                <p>Garanti BBVA İnternet Bankacılığından yapılacak başvurularda herhangi bir üst limit bulunmamaktadır. Müşterilerimiz, yaptıkları başvurularda onaylanan tutar kadar kredi kullanabilirler. Maaş ödemesini bankamızdan almayan bireysel müşterilerimiz için buradan kullanabilecek üst limit 25.000 TL’dir. KOBİ müşterilerimiz için ise Garanti BBVA İnternet Bankacılığından kullanabilecek üst limit 50.000 TL’dir.</p>
+                <a href="#">Detaylı bilgi</a>
+                <p>Mevcut bir başvurum için işlem yaparken tutar ve vadeyi değiştirebilir miyim?</p>
+                <a href="#">Diğer Yardım ve Öneriler</a>
+            </div>
+        </aside>
+    </div>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+                 
+    <script src="./bundle.js"></script>
+
+</body>
+</html>
