@@ -17,6 +17,15 @@ body {
     padding: 10px 20px;
 }
 
+.enviroment{
+    font-weight: bold;
+    font-size: 34px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+  
+
+}
+
 .logo img {
     height: 40px;
 }
