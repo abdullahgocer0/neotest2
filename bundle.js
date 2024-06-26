@@ -4404,7 +4404,6 @@ function handleEvent(event) {
         else {
             url = 'https://neotest-701e1c076af2.herokuapp.com/api/test/create';
         }
-        yield apiCall(url, description);
     });
 }
 function apiCall(url, body) {
@@ -4543,23 +4542,25 @@ function hideNotification() {
 }
 function fetchListeningParameter(origin) {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield apiCall('https://neotest-701e1c076af2.herokuapp.com/api/count/check/scenario-open', {
-            "url": origin
-        });
-        if (response == null) {
-            alert(origin + ' bulunamadı ');
-        }
-        return response.data.isOpen;
+        //    const response= await apiCall('https://neotest-701e1c076af2.herokuapp.com/api/count/check/scenario-open', {
+        //         "url": origin
+        //     })
+        //     if(response==null){
+        //         alert(origin + ' bulunamadı ')
+        //     }
+        //     return response.data.isOpen;
+        return true;
     });
 }
 function setListeningParameter(postUrl, origin) {
     return __awaiter(this, void 0, void 0, function* () {
         //url finish/scenario ise parameteti kapatır
         //url start/scenario ise parameteti açar
-        const response = yield apiCall(postUrl, {
-            "url": origin
-        });
-        return response.data.isOpen;
+        // const response= await apiCall(postUrl, {
+        //     "url": origin
+        // })
+        // return response.data.isOpen;
+        return true;
     });
 }
 window.addEventListener('beforeunload', storeEventDescriptions);
